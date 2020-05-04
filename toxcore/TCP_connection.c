@@ -234,6 +234,7 @@ static int wipe_tcp_connection(TCP_Connections *tcp_c, int tcp_connections_numbe
     memset(&tcp_c->tcp_connections[tcp_connections_number], 0, sizeof(TCP_con));
 
     uint32_t i;
+
     for (i = tcp_c->tcp_connections_length; i != 0; --i) {
         if (tcp_c->tcp_connections[i - 1].status != TCP_CONN_NONE) {
             break;
